@@ -98,30 +98,11 @@
             </script>
     
         </div>
-
-        <script>
-            window.addEventListener('pageshow', function() {
-                document.querySelectorAll('.social-page a').forEach(function(link) {
-                    link.blur();
-                    link.classList.remove('focus');
-                    link.classList.remove('hover');
-                });
-                // إذا كنت تستخدم كلاس خاص للـ hover في CSS أضفه هنا أيضاً
-            });
-            document.addEventListener('visibilitychange', function() {
-                if (!document.hidden) {
-                    document.querySelectorAll('.social-page a').forEach(function(link) {
-                        link.blur();
-                        link.classList.remove('focus');
-                        link.classList.remove('hover');
-                    });
-                }
-            });
-        </script>
         
     </body>
 
 </html>
+
 
 
 
