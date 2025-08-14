@@ -1,106 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Majd-Istanbuly</title>
-    <link rel="stylesheet" href="majd.css">
-    <link rel="icon" href="majd-logo2.png" type="image/x-icon">
-</head>
-<body>
-    <div class="fade-down">
-        <h1>Majd Istanbuly — Social Links</h1>
-    </div>
-
-    <div class="social-page">
-
-        <!-- TikTok -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Majd-Istanbuly</title>
+        <link rel="stylesheet" href="majd.css">
+        <link rel="icon" href="majd-logo2.png" type="image/x-icon">
+    </head>
+    <body>
         <div class="fade-down">
-            <div class="all">
-                <p class="img">
-                    <img class="main-img" src="Tiktok.JPG" alt="">
-                    <span class="back-img"><img class="back1" src="Tiktok-logo.png" alt=""> <span>@istanbuly</span></span>
-                </p>
-                <p class="des">
-                    <a class="div1" href="https://www.tiktok.com/@istanbuly">
-                        <span class="tik">Tiktok</span>
-                        <span></span>
-                    </a>
-                </p>
-            </div>
+            <h1>Majd Istanbuly — Social Links</h1>
         </div>
-
-        <!-- Youtube -->
-        <div class="fade-down">
-            <div class="all">
-                <p class="img">
-                    <img class="main-img" src="Youtube.JPG" alt="">
-                    <span class="back-img "> <img class="back2" src="Youtube-logo.png" alt=""><span>@Majdistanbuly</span></span>
-                </p>
-                <p class="des">
-                    <a class="div3" href="https://www.youtube.com/@Majdistanbuly-">
-                        <span>Youtube</span>
-                    </a>
-                </p>
+    
+        <div class="social-page">
+    
+            <!-- TikTok -->
+            <div class="fade-down">
+                <div class="all">
+                    <p class="img">
+                        <img class="main-img" src="Tiktok.JPG" alt="">
+                        <span class="back-img"><img class="back1" src="Tiktok-logo.png" alt=""> <span>@istanbuly</span></span>
+                    </p>
+                    <p class="des">
+                        <a class="div1" href="https://www.tiktok.com/@istanbuly">
+                            <span class="tik">Tiktok</span>
+                            <span></span>
+                        </a>
+                    </p>
+                </div>
             </div>
-        </div>
-
-        <!-- Instagram -->
-        <div class="fade-down">
-            <div class="all">
-                <p class="img">
-
-                    <img class="main-img" src="Insta.JPG" alt="">
-                    <span class="back-img " > <img class="back3" src="Insta-logo.png" alt=""><span>majd_aslanbolali</span>
-
-                </p>
-                <p class="des">
-                    <a class="div4" href="https://www.instagram.com/majd_aslanbolali/">
-                        <span class="inst">
-                            <span style="color:#FEDA75;">I</span>
-                            <span style="color:#FFC76F;">n</span>
-                            <span style="color:#FFB347;">s</span>
-                            <span style="color:#FF7F50;">t</span>
-                            <span style="color:#FF5E62;">a</span>
-                            <span style="color:#DD2A7B;">g</span>
-                            <span style="color:#C13584;">r</span>
-                            <span style="color:#8134AF;">a</span>
-                            <span style="color:#515BD4;">m</span>
-                        </span>
-                        <span></span>
-                    </a>
-                </p>
+    
+            <!-- Youtube -->
+            <div class="fade-down">
+                <div class="all">
+                    <p class="img">
+                        <img class="main-img" src="Youtube.JPG" alt="">
+                        <span class="back-img "> <img class="back2" src="Youtube-logo.png" alt=""><span>@Majdistanbuly</span></span>
+                    </p>
+                    <p class="des">
+                        <a class="div3" href="https://www.youtube.com/@Majdistanbuly-">
+                            <span>Youtube</span>
+                        </a>
+                    </p>
+                </div>
             </div>
+    
+            <!-- Instagram -->
+            <div class="fade-down">
+                <div class="all">
+                    <p class="img">
+    
+                        <img class="main-img" src="Insta.JPG" alt="">
+                        <span class="back-img " > <img class="back3" src="Insta-logo.png" alt=""><span>majd_aslanbolali</span>
+    
+                    </p>
+                    <p class="des">
+                        <a class="div4" href="https://www.instagram.com/majd_aslanbolali/">
+                            <span class="inst">
+                                <span style="color:#FEDA75;">I</span>
+                                <span style="color:#FFC76F;">n</span>
+                                <span style="color:#FFB347;">s</span>
+                                <span style="color:#FF7F50;">t</span>
+                                <span style="color:#FF5E62;">a</span>
+                                <span style="color:#DD2A7B;">g</span>
+                                <span style="color:#C13584;">r</span>
+                                <span style="color:#8134AF;">a</span>
+                                <span style="color:#515BD4;">m</span>
+                            </span>
+                            <span></span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+    
+            <script>
+                // تأخير الانتقال عند الضغط على الروابط
+                document.querySelectorAll('.social-page a').forEach(function(link) {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const url = link.getAttribute('href');
+                        setTimeout(function() {
+                            window.location.href = url;
+                        }, 500);
+                    });
+                });
+    
+                document.querySelectorAll('.img img, .img .back-img, .img .back-img img').forEach(function(card) {
+                    card.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        // ابحث عن أقرب عنصر أب يحمل الكلاس img
+                        let parentImg = card.closest('.img');
+                        if (parentImg) {
+                            parentImg.classList.toggle('rotated');
+                        }
+                    });
+                });
+            </script>
+    
         </div>
 
         <script>
-            // تأخير الانتقال عند الضغط على الروابط
             document.querySelectorAll('.social-page a').forEach(function(link) {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const url = link.getAttribute('href');
-                    setTimeout(function() {
-                        window.location.href = url;
-                    }, 500);
+                link.addEventListener('touchend', function() {
+                    // إزالة التركيز (focus) من الرابط بعد الضغط
+                    link.blur();
                 });
-            });
-
-            document.querySelectorAll('.img img, .img .back-img, .img .back-img img').forEach(function(card) {
-                card.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    // ابحث عن أقرب عنصر أب يحمل الكلاس img
-                    let parentImg = card.closest('.img');
-                    if (parentImg) {
-                        parentImg.classList.toggle('rotated');
-                    }
+                link.addEventListener('mouseup', function() {
+                    link.blur();
                 });
             });
         </script>
-
-    </div>
-</body>
+        
+    </body>
 
 </html>
+
 
 
 
