@@ -100,20 +100,29 @@
         </div>
 
         <script>
-            document.querySelectorAll('.social-page a').forEach(function(link) {
-                link.addEventListener('touchend', function() {
-                    // إزالة التركيز (focus) من الرابط بعد الضغط
+            window.addEventListener('pageshow', function() {
+                document.querySelectorAll('.social-page a').forEach(function(link) {
                     link.blur();
+                    link.classList.remove('focus');
+                    link.classList.remove('hover');
                 });
-                link.addEventListener('mouseup', function() {
-                    link.blur();
-                });
+                // إذا كنت تستخدم كلاس خاص للـ hover في CSS أضفه هنا أيضاً
+            });
+            document.addEventListener('visibilitychange', function() {
+                if (!document.hidden) {
+                    document.querySelectorAll('.social-page a').forEach(function(link) {
+                        link.blur();
+                        link.classList.remove('focus');
+                        link.classList.remove('hover');
+                    });
+                }
             });
         </script>
         
     </body>
 
 </html>
+
 
 
 
