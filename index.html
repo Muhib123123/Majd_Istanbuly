@@ -85,9 +85,10 @@
                 });
             });
 
-            document.querySelectorAll('.img').forEach(function(card) {
-                card.addEventListener('click', function() {
-                    card.classList.toggle('rotated');
+            document.querySelectorAll('.img img, .img .back-img').forEach(function(card) {
+                card.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    card.parentElement.classList.toggle('rotated');
                 });
             });
         </script>
@@ -96,3 +97,4 @@
 </body>
 
 </html>
+
