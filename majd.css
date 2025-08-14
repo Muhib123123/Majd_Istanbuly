@@ -152,6 +152,7 @@ body {
     position: relative;
     border-radius: 7px;
     backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .social-page div p a:hover{
@@ -464,6 +465,7 @@ h1::before {
     background-color: #5f5f5f;
     color: #ffffff ;
 }
+
 
 
 
