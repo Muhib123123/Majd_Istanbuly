@@ -466,22 +466,3 @@ h1::before {
     color: #ffffff ;
 }
 
-
-@media (hover: none) and (pointer: coarse) {
-    .social-page a:hover,
-    .social-page a:active,
-    .social-page a:focus {
-        background: none !important;
-        color: inherit !important;
-        box-shadow: none !important;
-        filter: none !important;
-        outline: none !important;
-    }
-}
-
-
-
-
-
-
-
